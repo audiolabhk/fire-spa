@@ -1,0 +1,10 @@
+<ul>
+  <li *ngFor='let activity of activities | filter: term'>
+    {{activity.activity}} has <code>funnest factor</code> of {{activity.fun}} 
+  </li>
+</ul>
+
+<p *ngIf="!term">Filter!</p>
+<p *ngIf="term">Filtering by {{term}}</p>
+
+<input type="text" placeholder="Search Term" [(ngModel)] = 'term'>
